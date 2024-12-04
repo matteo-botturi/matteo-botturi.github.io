@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-background: #f7f7f7;
+    --color-text: #5a5a5a;
+    --color-text-dark: #000000;
+    --color-primary: #335384;
+    --color-primary-hover: #3a8cb7;
+    --color-secondary: #ffc107;
+    --color-secondary-hover: #e0a800;
+
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    --font-tertiary: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+button, .btn {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-family: var(--font-primary);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.page-container {
+    margin-top: 80px;
+}
+
+/* Imposta Flexbox per la struttura globale */
+html, body {
+    height: 100%; /* Altezza completa dello schermo */
+    margin: 0; /* Rimuove margini indesiderati */
+    overflow-x: hidden; /* Nasconde lo scorrimento orizzontale */
+    display: flex;
+    flex-direction: column; /* Disposizione verticale: header, contenuto, footer */
+  }  
+  
+  /* Applica flexbox alla struttura interna */
+  app-root {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Occupa lo spazio disponibile */
+  }
+  
+  /* Contenitore del contenuto */
+  main {
+    flex: 1; /* Espandi il contenitore principale per riempire lo spazio */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Footer sticky */
+  app-footer {
+    flex-shrink: 0; /* Impedisce che il footer venga compresso */
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+  

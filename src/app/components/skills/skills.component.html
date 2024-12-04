@@ -1,0 +1,41 @@
+<div class="page-header page-container">
+  <h1>Le mie Competenze</h1>
+</div>
+
+<div class="dropdown-container">
+  <button class="dropdown-trigger btn" (click)="toggleDropdown($event)" [attr.aria-expanded]="dropdownOpen">
+    {{ selectedCategory?.name || 'Tutte le Competenze' }}
+    <i class="material-icons" aria-hidden="true">expand_more</i>
+  </button>
+  <ul *ngIf="dropdownOpen" class="dropdown-menu" role="menu">
+    <li (click)="showAllSkills($event)">
+      <a href="#" role="menuitem">Tutte</a>
+    </li>
+    <li *ngFor="let category of categories" (click)="selectCategory(category, $event)">
+      <a href="#" role="menuitem">{{ category.name }}</a>
+    </li>
+  </ul>
+</div>
+
+<div class="skills-container">
+  <ng-container *ngIf="!selectedCategory; else singleCategory">
+    <div *ngFor="let category of categories" class="category">
+      <h2>{{ category.name }}</h2>
+      <div class="skills-grid">
+        <div *ngFor="let skill of category.skills" class="skill-item">
+          <img [src]="skill.imageUrl" [alt]="skill.name">
+          <p>{{ skill.name }}</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #singleCategory>
+    <div class="skills-grid">
+      <div *ngFor="let skill of getSkills()" class="skill-item">
+        <img [src]="skill.imageUrl" [alt]="skill.name">
+        <p>{{ skill.name }}</p>
+      </div>
+    </div>
+  </ng-template>
+</div>

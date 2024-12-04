@@ -1,0 +1,90 @@
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+nav {
+  background-color: #335384;
+}
+
+.nav-wrapper .brand-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-wrapper ul li a {
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-wrapper ul li a:hover {
+  background-color: #3a8cb7;
+  border-radius: 4px;
+}
+
+body {
+  padding-top: 64px; 
+}
+
+nav .nav-wrapper ul {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav .nav-wrapper ul li {
+  margin: 0 20px;
+}
+
+nav .nav-wrapper ul li a.active {
+  font-weight: bold;
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary-hover);
+}
+
+.sidenav {
+  display: none;
+  background-color: #335384;
+  color: white;
+  padding-top: 64px;
+}
+
+.sidenav li a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.sidenav li a:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.sidenav-trigger {
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.material-icons{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    display: block;
+  }
+
+  .material-icons{
+    display: block;
+  }
+}

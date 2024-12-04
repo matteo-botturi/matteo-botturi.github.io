@@ -1,0 +1,30 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul id="nav-desktop" class="center hide-on-med-and-down">
+        <li>
+          <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+        </li>
+        <li>
+          <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">À propos</a>
+        </li>
+        <li>
+          <a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Compétences</a>
+        </li>
+        <li>
+          <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Projets</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="sidenav" id="mobile-menu">
+  <li><a routerLink="/home" routerLinkActive="active" (click)="closeSidenav()">Accueil</a></li>
+  <li><a routerLink="/about" routerLinkActive="active" (click)="closeSidenav()">À propos</a></li>
+  <li><a routerLink="/skills" routerLinkActive="active" (click)="closeSidenav()">Compétences</a></li>
+  <li><a routerLink="/projects" routerLinkActive="active" (click)="closeSidenav()">Projets</a></li>
+</ul>

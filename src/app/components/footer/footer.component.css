@@ -1,0 +1,85 @@
+/* Footer - Base styles */
+.page-footer {
+  background-color: #335384;
+  color: white;
+  padding: 20px 0;
+}
+
+.page-footer .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-footer p {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.quick-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap; /* Permette di andare a capo se necessario */
+}
+
+.quick-links li a {
+  color: #b0c4de;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.quick-links li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  background-color: #2c3e50;
+  color: #b0c4de;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.social-links {
+  margin: 30px 0;
+}
+
+.icon-link {
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: white;
+}
+
+.icon-link:hover {
+  transform: scale(1.2);
+  background-color: var(--color-secondary-hover);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-footer .row {
+    flex-direction: column; /* Disposizione verticale */
+    align-items: center;
+    text-align: center; /* Centralizza il testo */
+  }
+
+  .page-footer .col {
+    width: 100%; /* Ogni colonna occupa l'intera larghezza */
+    margin-bottom: 20px; /* Spaziatura tra le sezioni */
+  }
+
+  .quick-links {
+    justify-content: center; /* Centra i link nella versione mobile */
+  }
+}

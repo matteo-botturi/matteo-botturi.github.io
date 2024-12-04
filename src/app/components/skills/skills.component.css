@@ -1,0 +1,163 @@
+.page-header{
+  text-align: center;
+}
+
+.dropdown-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Adatta il bottone alla larghezza del contenitore */
+  max-width: 350px; /* Limita la larghezza su schermi più grandi */
+  box-sizing: border-box; /* Include padding e border nella larghezza */
+  overflow: hidden; /* Evita che il contenuto esca dal bottone */
+  white-space: nowrap; /* Evita il ritorno a capo */
+  text-overflow: ellipsis; /* Mostra "..." per il testo troppo lungo */
+}
+
+.dropdown-trigger i {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Adatta la larghezza del menu */
+  max-width: 350px; /* Limita la larghezza su schermi più grandi */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  overflow-y: auto; /* Scroll se ci sono troppe voci */
+}
+
+.dropdown-menu li {
+  padding: 10px 15px; /* Area cliccabile più grande */
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: inherit;
+  font-size: 1rem;
+  white-space: nowrap; /* Evita il ritorno a capo */
+  overflow: hidden; /* Evita il testo fuori dai limiti */
+  text-overflow: ellipsis; /* Mostra "..." per il testo lungo */
+}
+
+.skills-container {
+  margin: 20px auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.category h2 {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center; /* Centra le card orizzontalmente */
+}
+
+.skill-item {
+  text-align: center;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Centra le card in versione mobile */
+@media screen and (max-width: 768px) {
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra tutto il contenuto */
+    margin-bottom: 40px;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra le card orizzontalmente */
+    margin: 0 auto; /* Centra le card rispetto alla pagina */
+  }
+
+  .card {
+    width: 90%; /* Larghezza relativa per adattarsi allo schermo */
+    max-width: 350px; /* Limita la larghezza massima */
+    margin-bottom: 20px; /* Spaziatura tra le card */
+  }
+
+  .dropdown-container {
+    width: 100%; /* Adatta la larghezza del contenitore */
+    text-align: center; /* Centra il contenuto */
+    margin-bottom: 20px;
+  }
+
+  .dropdown-trigger {
+    width: 90%; /* Aumenta la larghezza del pulsante */
+    max-width: 350px; /* Limita la larghezza massima */
+    padding: 15px; /* Aumenta l'area cliccabile */
+    font-size: 1.2rem; /* Testo più grande */
+    border-radius: 8px; /* Angoli arrotondati per migliorare l'usabilità */
+    text-align: center;
+  }
+
+  .dropdown-menu li a {
+    font-size: 1.2rem; /* Testo più leggibile */
+    padding: 10px 15px; /* Maggior spazio cliccabile */
+  }
+
+  .category h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

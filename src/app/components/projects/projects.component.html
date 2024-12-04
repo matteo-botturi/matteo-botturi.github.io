@@ -1,0 +1,38 @@
+<div class="container page-container">
+  <div class="row">
+    <div *ngFor="let project of projects | slice:0:visibleProjects" class="col s12 m6 l4">
+      <article class="card">
+        <div class="card-image">
+          <img [src]="project.image" [alt]="'Photo ' + project.name" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h5>{{ project.name }}</h5>
+          <!-- Descrizione opzionale -->
+          <div *ngIf="project.description" class="project-description">
+            <p>{{ project.description }}</p>
+          </div>
+          <div class="chips">
+            <div *ngFor="let chip of project.chips" [class]="chip | languageColor">
+              {{ chip }}
+            </div>
+          </div>
+          <a 
+            [href]="project.link !== '#' ? project.link : null" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-small" 
+            [class.disabled]="project.link === '#'" 
+            [attr.aria-disabled]="project.link === '#'" 
+            [title]="project.link === '#' ? 'Work in progress' : ''">
+            {{ project.link === '#' ? 'Work in Progress' : 'Aller au dépôt' }}
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Pulsante per caricare altri progetti -->
+  <div *ngIf="visibleProjects < projects.length" class="load-more-container">
+    <button (click)="loadMoreProjects()" class="btn-small">Carica altro</button>
+  </div>
+</div>

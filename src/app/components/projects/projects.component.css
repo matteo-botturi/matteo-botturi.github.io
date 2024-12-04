@@ -1,0 +1,136 @@
+.card {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-content .btn-small {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  background-color: #335384;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex; /* Usato per il centramento verticale */
+  justify-content: center; /* Allineamento orizzontale */
+  align-items: center; /* Allineamento verticale */
+  height: 40px; /* Altezza fissa per il pulsante */
+  width: 100%; /* Imposta la larghezza del pulsante */
+  transition: background-color 0.3s ease;
+}
+
+.card-content .btn-small:hover {
+  background-color: #3a8cb7;
+}
+
+.card-content .btn-small.disabled {
+  background-color: #ddd; /* Colore grigio per il pulsante disabilitato */
+  cursor: not-allowed; /* Cambia il cursore per mostrare che è disabilitato */
+  pointer-events: none; /* Disabilita i clic */
+}
+
+.card-content .btn-small.disabled:hover {
+  background-color: #ddd; /* Non cambierà colore al passaggio del mouse */
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.chips .chip {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  text-transform: capitalize;
+  color: #fff;  /* Imposta il colore del testo su bianco per una buona leggibilità */
+  display: inline-block; /* Garantisce che le chips siano inline */
+  margin: 4px; /* Distanza tra le chips */
+}
+
+/* Modifica il layout della griglia per avere 2 card per riga */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* Assicurati che le card non siano più piccole di un certo limite */
+.col.s12.m6.l6 {
+  flex: 0 0 calc(50% - 10px); /* Mostra due card per riga */
+  max-width: calc(50% - 10px); /* Evita che le card siano troppo larghe */
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.load-more-container .btn-small {
+  background-color: #335384;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.load-more-container .btn-small:hover {
+  background-color: #3a8cb7;
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-image {
+    height: auto;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
