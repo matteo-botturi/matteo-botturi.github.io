@@ -1,15 +1,15 @@
 <div class="page-header page-container">
-  <h1>Le mie Competenze</h1>
+  <h1>Mon stack technique</h1>
 </div>
 
 <div class="dropdown-container">
   <button class="dropdown-trigger btn" (click)="toggleDropdown($event)" [attr.aria-expanded]="dropdownOpen">
-    {{ selectedCategory?.name || 'Tutte le Competenze' }}
+    {{ selectedCategory?.name || 'Tout' }}
     <i class="material-icons" aria-hidden="true">expand_more</i>
   </button>
   <ul *ngIf="dropdownOpen" class="dropdown-menu" role="menu">
     <li (click)="showAllSkills($event)">
-      <a href="#" role="menuitem">Tutte</a>
+      <a href="#" role="menuitem">Tout</a>
     </li>
     <li *ngFor="let category of categories" (click)="selectCategory(category, $event)">
       <a href="#" role="menuitem">{{ category.name }}</a>

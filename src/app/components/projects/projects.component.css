@@ -86,14 +86,6 @@
   margin: 4px; /* Distanza tra le chips */
 }
 
-/* Modifica il layout della griglia per avere 2 card per riga */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: space-between;
-}
-
 /* Assicurati che le card non siano più piccole di un certo limite */
 .col.s12.m6.l6 {
   flex: 0 0 calc(50% - 10px); /* Mostra due card per riga */
@@ -104,6 +96,9 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center; /* Allineamento orizzontale */
+  align-items: center; /* Allineamento verticale */
 }
 
 .load-more-container .btn-small {
@@ -113,6 +108,10 @@
   padding: 8px 16px;
   text-transform: uppercase;
   font-weight: bold;
+  display: flex;
+  
+  align-items: center; /* Allineamento verticale */
+
 }
 
 .load-more-container .btn-small:hover {

@@ -15,9 +15,9 @@ declare const M: any;
 })
 export class ProjectsComponent {
   projects = PROJECTS;
-  visibleProjects: number = 4;
+  visibleProjects: number = 6;
 
   loadMoreProjects() {
-    this.visibleProjects += 4;
+    this.visibleProjects += 2;
   }
 }
