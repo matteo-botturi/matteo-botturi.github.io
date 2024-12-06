@@ -1,16 +1,23 @@
 <div class="container page-container">
   <div class="row">
-    <div *ngFor="let project of projects | slice:0:visibleProjects" class="col s12 m6 l4">
+    <div 
+      *ngFor="let project of projects | slice:0:visibleProjects" 
+      class="col s12 m6 l4"
+      role="article"
+      aria-label="Project Card">
       <article class="card">
         <div class="card-image">
-          <img [src]="project.image" [alt]="'Photo ' + project.name" loading="lazy">
+          <img 
+            [src]="project.image" 
+            [alt]="'Photo du projet: ' + project.name" 
+            loading="lazy">
         </div>
         <div class="card-content">
           <h5>{{ project.name }}</h5>
           <div *ngIf="project.description" class="project-description">
             <p>{{ project.description }}</p>
           </div>
-          <div class="chips">
+          <div class="chips" aria-label="Technologies utilisées">
             <div *ngFor="let chip of project.chips" [class]="chip | languageColor">
               {{ chip }}
             </div>
@@ -22,14 +29,14 @@
             class="btn-small" 
             [class.disabled]="project.link === '#'" 
             [attr.aria-disabled]="project.link === '#'" 
-            [title]="project.link === '#' ? 'Work in progress' : ''">
+            [title]="project.link === '#' ? 'Work in progress' : 'Accéder au dépôt'">
             {{ project.link === '#' ? 'Work in Progress' : 'Aller au dépôt' }}
           </a>
         </div>
       </article>
     </div>
   </div>
-  <div *ngIf="visibleProjects < projects.length" class="load-more-container">
+  <div *ngIf="visibleProjects < projects.length" class="load-more-container" aria-label="Charger d'autres projets">
     <button (click)="loadMoreProjects()" class="btn-small">Charger plus</button>
   </div>
 </div>

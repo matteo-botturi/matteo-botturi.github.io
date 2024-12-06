@@ -1,36 +1,64 @@
 <div class="hero-section">
   <div class="row">
-    <!-- Colonna Foto e Carousel -->
-    <div class="col s12 l6">
+    <div class="col s12 m6">
       <div class="hero-image center-align">
-        <img class="hero-photo responsive-img" src="assets/images/home/home-photo.webp" alt="Portrait de Matteo Botturi">
+        <picture>
+          <source srcset="assets/images/home/hero200.webp" media="(max-width: 480px)" type="image/webp">
+          <source srcset="assets/images/home/hero300.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="assets/images/home/hero400.webp" media="(min-width: 769px)" type="image/webp">
+          <img 
+            src="assets/images/home/hero400.webp" 
+            alt="Portrait de Matteo Botturi" 
+            class="hero-photo responsive-img">
+        </picture>
       </div>
-      <div class="carousel carousel-slider center-align">
-        <div class="carousel-item">
-          <button class="btn-large cta-button" (click)="goToPage('/projects')">Découvrez mes projets</button>
-        </div>
-        <div class="carousel-item">
-          <button class="btn-large cta-button" (click)="goToPage('/skills')">Mes compétences</button>
-        </div>
+      <div class="hero-buttons">
+        <button 
+          class="btn-large cta-button" 
+          (click)="goToPage('/projects')" 
+          aria-label="Voir mes projets">
+          Mes Projets
+        </button>
+        <button 
+          class="btn-large cta-button secondary" 
+          (click)="goToPage('/skills')" 
+          aria-label="Voir mes compétences">
+          Mes Compétences
+        </button>
       </div>
     </div>
-
-    <!-- Colonna Testo -->
-    <div class="col s12 l6">
+    <div class="col s12 m6">
       <div class="hero-text">
-        <h1>Bonjour, je suis Matteo Botturi</h1>
-        <h3>Développeur Full Stack</h3>
+        <h1 tabindex="0">Bonjour, je suis Matteo Botturi</h1>
+        <p class="animated-text" aria-live="polite">
+          {{ currentText }}
+          <span class="cursor" aria-hidden="true">|</span>
+        </p>
         <p>
           Passionné par le développement web, la création d’interfaces intuitives et les technologies innovantes.
           Toujours prêt à relever de nouveaux défis et à apprendre.
         </p>
-        <h5>Contactez moi</h5>
+        <h2>Contactez-moi</h2>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" aria-label="LinkedIn">
-            <img src="assets/images/home/linkedin.webp" alt="Profil LinkedIn" class="icon-link">
+          <a 
+            href="https://www.linkedin.com/in/matteo-botturi/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Lien vers LinkedIn">
+            <img 
+              src="assets/images/home/linkedin.webp" 
+              alt="Profil LinkedIn" 
+              class="icon-link">
           </a>
-          <a href="https://github.com/matteo-botturi/" target="_blank" aria-label="GitHub">
-            <img src="assets/images/home/github.webp" alt="Profil GitHub" class="icon-link">
+          <a 
+            href="https://github.com/matteo-botturi/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Lien vers GitHub">
+            <img 
+              src="assets/images/home/github.webp" 
+              alt="Profil GitHub" 
+              class="icon-link">
           </a>
         </div>
       </div>

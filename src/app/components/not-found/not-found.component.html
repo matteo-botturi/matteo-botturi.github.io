@@ -1,5 +1,13 @@
 <div class="not-found-container">
-    <h1>404</h1>
-    <p>Oups! La page que vous cherchez n'existe pas.</p>
-    <button (click)="goToPage('/home')" class="btn">Retour à l'accueil</button>
-</div>
+    <h1 aria-label="Erreur 404">404</h1>
+    <p aria-label="Description de l'erreur">
+      Oups! La page que vous cherchez n'existe pas.
+    </p>
+    <button 
+      (click)="goToPage('/home')" 
+      class="btn" 
+      aria-label="Retour à la page d'accueil">
+      Retour à l'accueil
+    </button>
+  </div>
+  

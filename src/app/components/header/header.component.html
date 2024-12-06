@@ -1,53 +1,45 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <!-- Sidenav Trigger -->
-      <a href="#" data-target="mobile-menu" class="sidenav-trigger left">
+      <a href="#" data-target="mobile-menu" class="sidenav-trigger left" aria-label="Ouvrir le menu mobile">
         <i class="material-icons">menu</i>
       </a>
-      
-      <!-- Menu Centrale -->
       <ul id="nav-desktop" class="center hide-on-med-and-down">
         <li>
-          <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+          <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-label="Aller à la page d'accueil">Accueil</a>
         </li>
         <li>
-          <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">À propos</a>
+          <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-label="Aller à la page À propos">À propos</a>
         </li>
         <li>
-          <a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Compétences</a>
+          <a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-label="Aller à la page Compétences">Compétences</a>
         </li>
         <li>
-          <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Projets</a>
+          <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-label="Aller à la page Projets">Projets</a>
         </li>
-
       </ul>
     </div>
   </nav>
 </div>
-
-<!-- Sidenav -->
-<ul id="mobile-menu" class="sidenav">
+<ul id="mobile-menu" class="sidenav" aria-label="Navigation du menu mobile">
   <li>
-    <a routerLink="/home" routerLinkActive="active" (click)="closeSidenav()">Accueil</a>
+    <a routerLink="/home" routerLinkActive="active" (click)="closeSidenav()" aria-label="Aller à la page d'accueil">Accueil</a>
   </li>
   <li>
-    <a routerLink="/about" routerLinkActive="active" (click)="closeSidenav()">À propos</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="closeSidenav()" aria-label="Aller à la page d'accueil À propos">À propos</a>
   </li>
   <li>
-    <a routerLink="/skills" routerLinkActive="active" (click)="closeSidenav()">Compétences</a>
+    <a routerLink="/skills" routerLinkActive="active" (click)="closeSidenav()" aria-label="Aller à la page d'accueil Compétences">Compétences</a>
   </li>
   <li>
-    <a routerLink="/projects" routerLinkActive="active" (click)="closeSidenav()">Projets</a>
+    <a routerLink="/projects" routerLinkActive="active" (click)="closeSidenav()" aria-label="Aller à la page d'accueil Projets">Projets</a>
   </li>
-
-  <!-- Social Links Section -->
   <li class="social-links-mobile">
-    <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" aria-label="LinkedIn">
-      <img src="assets/images/home/linkedin.webp" alt="Profil LinkedIn" class="icon-link">
+    <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn">
+      <img src="assets/images/home/linkedin.webp" alt="Profilo LinkedIn" class="icon-link">
     </a>
-    <a href="https://github.com/matteo-botturi/" target="_blank" aria-label="GitHub">
-      <img src="assets/images/home/github.webp" alt="Profil GitHub" class="icon-link">
+    <a href="https://github.com/matteo-botturi/" target="_blank" rel="noopener noreferrer" aria-label="Profile GitHub">
+      <img src="assets/images/home/github.webp" alt="Profilo GitHub" class="icon-link">
     </a>
   </li>
 </ul>

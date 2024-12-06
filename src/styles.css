@@ -1,11 +1,12 @@
 :root {
   --color-background: #f7f7f7;
+  --gradient-background: linear-gradient(135deg, var(--color-background), #dce6f2);
   --color-text: #5a5a5a;
   --color-text-dark: #000000;
   --color-primary: #335384;
   --color-primary-hover: #3a8cb7;
   --color-secondary: #ffc107;
-  --color-secondary-hover: #ffc107;
+  --color-secondary-hover: #ffd54f;
   --font-primary: 'Montserrat', sans-serif;
   --nav-height: 64px;
 }
@@ -17,9 +18,9 @@
 }
 
 html, body {
-  height: 100%; /* Mantiene l'altezza totale */
+  height: 100%;
   font-family: var(--font-primary);
-  background: linear-gradient(135deg, #f7f7f7, #dce6f2); /* Sfondo sfumato */
+  background: var(--gradient-background);
   color: var(--color-text);
   overflow-x: hidden;
 }
@@ -27,11 +28,11 @@ html, body {
 app-root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Almeno l'altezza della viewport */
+  min-height: 100vh;
 }
 
 main {
-  flex: 1; /* Occupa lo spazio rimanente tra header e footer */
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -41,7 +42,7 @@ main {
 }
 
 app-footer {
-  flex-shrink: 0; /* Fissa il footer in basso */
+  flex-shrink: 0;
   background-color: var(--color-primary);
   color: white;
   text-align: center;
@@ -49,7 +50,6 @@ app-footer {
   width: 100%;
 }
 
-/* Stili aggiuntivi */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary);
   font-family: var(--font-primary);
@@ -62,7 +62,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-secondary-hover);
 }
 
 button, .btn {

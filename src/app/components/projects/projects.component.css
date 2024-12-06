@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #f7f7f7;
+  background-color: var(--color-background);
 }
 
 .card-image img {
@@ -47,7 +47,7 @@
   text-transform: uppercase;
   font-weight: bold;
   padding: 8px 16px;
-  background-color: #335384;
+  background-color: --color-primary;
   color: white;
   border-radius: 4px;
   text-decoration: none;
@@ -56,12 +56,12 @@
   align-items: center;
   height: 40px;
   width: 100%;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .card-content .btn-small:hover,
 .card-content .btn-small:focus {
-  background-color: #3a8cb7;
+  background-color: --color-primary-hover;
   transform: scale(1.05);
 }
 
@@ -70,10 +70,6 @@
   cursor: not-allowed;
   pointer-events: none;
   color: #aaa;
-}
-
-.card-content .btn-small.disabled:hover {
-  background-color: #ddd;
 }
 
 .chips {
@@ -93,24 +89,24 @@
   color: #fff;
   display: inline-block;
   margin: 4px;
-  background-color: #335384;
+  background-color: --color-primary;
+  transition: background-color 0.3s ease;
 }
 
 .chips .chip:hover {
-  background-color: #3a8cb7;
+  background-color: --color-primary-hover;
 }
 
 .load-more-container {
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .load-more-container .btn-small {
-  background-color: #335384;
+  background-color: --color-primary;
   color: white;
   border-radius: 4px;
   padding: 8px 16px;
@@ -119,25 +115,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .load-more-container .btn-small:hover {
-  background-color: #3a8cb7;
+  background-color: --color-primary-hover;
   transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .col.s12.m6.l4 {
-    flex: 0 0 calc(50% - 10px); /* Due card per riga */
+    flex: 0 0 calc(50% - 10px);
     max-width: calc(50% - 10px);
   }
 }
 
 @media (max-width: 768px) {
   .col.s12.m6.l4 {
-    flex: 0 0 100%; /* Una card per riga */
+    flex: 0 0 100%;
     max-width: 100%;
   }
 

@@ -1,33 +1,41 @@
 <footer class="page-footer">
   <div class="container">
     <div class="row">
+      <!-- Blocco sinistro -->
       <div class="col l6 s12">
         <div class="footer-buttons">
-        <p class="grey-text text-lighten-4">
-          Réalisé avec 💖 par Matteo
-        </p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/XXX/" target="_blank" aria-label="LinkedIn">
-            <img src="assets/images/home/linkedin.webp" alt="LinkedIn" class="icon-link">
-          </a>
-          <a href="https://github.com/XXX/" target="_blank" aria-label="GitHub">
-            <img src="assets/images/home/github.webp" alt="GitHub" class="icon-link">
-          </a>
+          <p class="grey-text text-lighten-4" aria-label="Auteur du portfolio">
+            Réalisé avec 💖 par Matteo
+          </p>
+          <div class="social-links" aria-label="Liens vers les réseaux sociaux">
+            <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img src="assets/images/home/linkedin.webp" alt="LinkedIn" class="icon-link">
+            </a>
+            <a href="https://github.com/matteo-botturi/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <img src="assets/images/home/github.webp" alt="GitHub" class="icon-link">
+            </a>
+          </div>
         </div>
       </div>
-      </div>
+
+      <!-- Blocco destro -->
       <div class="col l6 s12">
-        <ul class="quick-links">
-          <li><a class="grey-text text-lighten-3" (click)="goToPage('/home')">Accueil</a></li>
-          <li><a class="grey-text text-lighten-3" (click)="goToPage('/about')">À propos</a></li>
-          <li><a class="grey-text text-lighten-3" (click)="goToPage('/skills')">Compétences</a></li>
-          <li><a class="grey-text text-lighten-3" (click)="goToPage('/projects')">Projets</a></li>
-        </ul>
+        <div class="footer-buttons">
+          <ul class="quick-links" aria-label="Liens de navigation">
+            <li><a (click)="goToPage('/home')" aria-label="Aller à la page d'accueil">Accueil</a></li>
+            <li><a (click)="goToPage('/about')" aria-label="Aller à la page À propos">À propos</a></li>
+            <li><a (click)="goToPage('/skills')" aria-label="Aller à la page Compétences">Compétences</a></li>
+            <li><a (click)="goToPage('/projects')" aria-label="Aller à la page Projets">Projets</a></li>
+          </ul>
+          <div class="footer-logo">
+            <img src="assets/images/logo.webp" alt="Logo Matteo Botturi" class="footer-logo-img">
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
-    <div class="container">
+    <div class="container" aria-label="Informations sur le copyright">
       © 2024 - Tous droits réservés
     </div>
   </div>

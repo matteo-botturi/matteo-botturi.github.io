@@ -1,4 +1,14 @@
-/* Generale */
+h2{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h5{
+  font-weight: bold;
+}
+
 .page-header {
   text-align: center;
   margin: 20px 0;
@@ -27,11 +37,12 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  background-color: var(--color-primary) ;
 }
 
 .dropdown-trigger:hover,
-.dropdown-trigger:focus {
-  background-color: #f0f0f0;
+.dropdown-trigger:focus-visible {
+  background-color: var(--color-primary-hover) ;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -65,12 +76,11 @@
 }
 
 .dropdown-menu li:hover,
-.dropdown-menu li:focus {
-  background-color: #f7f7f7;
+.dropdown-menu li:focus-visible {
+  background-color: var(--color-background);
 }
 
 .dropdown-menu li a {
-  text-decoration: none;
   display: block;
   width: 100%;
   color: inherit;
@@ -80,7 +90,6 @@
   text-overflow: ellipsis;
 }
 
-/* Skills Container */
 .skills-container {
   margin: 20px auto;
   padding: 0 5px;
@@ -95,9 +104,9 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr)); /* Layout dinamico */
-  gap: 10px;
-  justify-content: center; /* Centra la griglia */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  justify-content: center;
 }
 
 .skill-item {
@@ -124,14 +133,11 @@
 }
 
 .skill-item:hover,
-.skill-item:focus {
+.skill-item:focus-visible {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsività */
-
-/* Smartphone: 2 card per riga */
 @media screen and (max-width: 600px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -142,26 +148,14 @@
   }
 }
 
-/* Tablet verticali: 3 card per riga, margini maggiori */
 @media screen and (min-width: 601px) and (max-width: 768px) {
   .skills-container {
-    padding: 0 30px; /* Aumenta i margini laterali */
+    padding: 0 30px;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px; /* Più spazio tra le card */
-  }
-
-  .category h2 {
-    text-align: center; /* Titoli centrati */
-  }
-}
-
-/* Tablet orizzontali: 4 card per riga */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
   }
 
   .category h2 {
@@ -169,10 +163,12 @@
   }
 }
 
-/* Desktop: 4 o più card per riga */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 15px;
+  }
+
+  .category h2 {
+    text-align: center;
   }
 }

@@ -1,20 +1,35 @@
 .nav-wrapper {
-  background-color: #335384; /* Colore di sfondo della navbar */
+  background-color: var(--color-primary);
 }
 
 .nav-wrapper ul#nav-desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .nav-wrapper ul#nav-desktop li a {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  transition: color 0.3s ease;
 }
 
-.nav-wrapper ul#nav-desktop li a:hover {
-  color: #ffc107; /* Colore di hover */
+.nav-wrapper ul#nav-desktop li a.active {
+  color: var(--color-secondary-hover);
+  border-bottom: 2px solid var(--color-secondary-hover);
+  border-radius: 8px;
+}
+
+.sidenav {
+  background-color: --color-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding-bottom: 20px;
 }
 
 .sidenav li a {
@@ -25,36 +40,19 @@
 }
 
 .sidenav li a:hover {
-  background-color: #3a8cb7;
+  background-color: var(--color-primary);
 }
 
-/* Centra il menu principale */
-.nav-wrapper ul#nav-desktop {
-  display: flex;
-  justify-content: center; /* Centra gli elementi orizzontalmente */
-  align-items: center; /* Centra gli elementi verticalmente */
-  text-align: center;
-  margin: 0 auto; /* Centra il menu nella navbar */
-  padding: 0;
+.sidenav li a.active {
+  color: var(--color-secondary-hover);
 }
 
-/* Rendi la sidenav un layout flessibile */
-.sidenav {
-  background-color: #335384;
-  display: flex;
-  flex-direction: column; /* Dispone gli elementi in colonna */
-  justify-content: space-between; /* Spazio tra gli elementi */
-  height: 100vh; /* Altezza completa della viewport */
-  padding-bottom: 20px; /* Spaziatura inferiore */
-}
-
-/* Posiziona i social link in basso */
 .social-links-mobile {
-  display: flex; /* Dispone i link in riga */
-  justify-content: center; /* Centra i link orizzontalmente */
-  align-items: center; /* Centra i link verticalmente */
-  gap: 10px; /* Spazio tra i link */
-  margin-top: auto; /* Spinge la sezione in basso */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
 }
 
 .social-links-mobile a {
@@ -64,9 +62,9 @@
 }
 
 .icon-link {
-  width: 40px; /* Dimensione icona */
+  width: 40px;
   height: 40px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 50%;
   padding: 5px;
   background-color: white;
