@@ -1,9 +1,12 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+      <!-- Sidenav Trigger -->
+      <a href="#" data-target="mobile-menu" class="sidenav-trigger left">
         <i class="material-icons">menu</i>
       </a>
+      
+      <!-- Menu Centrale -->
       <ul id="nav-desktop" class="center hide-on-med-and-down">
         <li>
           <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
@@ -17,14 +20,34 @@
         <li>
           <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Projets</a>
         </li>
+
       </ul>
     </div>
   </nav>
 </div>
 
-<ul class="sidenav" id="mobile-menu">
-  <li><a routerLink="/home" routerLinkActive="active" (click)="closeSidenav()">Accueil</a></li>
-  <li><a routerLink="/about" routerLinkActive="active" (click)="closeSidenav()">À propos</a></li>
-  <li><a routerLink="/skills" routerLinkActive="active" (click)="closeSidenav()">Compétences</a></li>
-  <li><a routerLink="/projects" routerLinkActive="active" (click)="closeSidenav()">Projets</a></li>
+<!-- Sidenav -->
+<ul id="mobile-menu" class="sidenav">
+  <li>
+    <a routerLink="/home" routerLinkActive="active" (click)="closeSidenav()">Accueil</a>
+  </li>
+  <li>
+    <a routerLink="/about" routerLinkActive="active" (click)="closeSidenav()">À propos</a>
+  </li>
+  <li>
+    <a routerLink="/skills" routerLinkActive="active" (click)="closeSidenav()">Compétences</a>
+  </li>
+  <li>
+    <a routerLink="/projects" routerLinkActive="active" (click)="closeSidenav()">Projets</a>
+  </li>
+
+  <!-- Social Links Section -->
+  <li class="social-links-mobile">
+    <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" aria-label="LinkedIn">
+      <img src="assets/images/home/linkedin.webp" alt="Profil LinkedIn" class="icon-link">
+    </a>
+    <a href="https://github.com/matteo-botturi/" target="_blank" aria-label="GitHub">
+      <img src="assets/images/home/github.webp" alt="Profil GitHub" class="icon-link">
+    </a>
+  </li>
 </ul>

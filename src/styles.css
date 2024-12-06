@@ -1,86 +1,128 @@
 :root {
-    --color-background: #f7f7f7;
-    --color-text: #5a5a5a;
-    --color-text-dark: #000000;
-    --color-primary: #335384;
-    --color-primary-hover: #3a8cb7;
-    --color-secondary: #ffc107;
-    --color-secondary-hover: #e0a800;
-
-    --font-primary: 'Montserrat', sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
-    --font-tertiary: 'Lato', sans-serif;
+  --color-background: #f7f7f7;
+  --color-text: #5a5a5a;
+  --color-text-dark: #000000;
+  --color-primary: #335384;
+  --color-primary-hover: #3a8cb7;
+  --color-secondary: #ffc107;
+  --color-secondary-hover: #ffc107;
+  --font-primary: 'Montserrat', sans-serif;
+  --nav-height: 64px;
 }
 
-body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: var(--font-primary);
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--color-primary);
-    font-family: var(--font-secondary);
+html, body {
+  height: 100%; /* Mantiene l'altezza totale */
+  font-family: var(--font-primary);
+  background: linear-gradient(135deg, #f7f7f7, #dce6f2); /* Sfondo sfumato */
+  color: var(--color-text);
+  overflow-x: hidden;
 }
 
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Almeno l'altezza della viewport */
 }
 
-a:hover {
-    color: var(--color-primary-hover);
-}
-
-button, .btn {
-    background-color: var(--color-primary);
-    color: #fff;
-    font-family: var(--font-primary);
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover, .btn:hover {
-    background-color: var(--color-primary-hover);
+main {
+  flex: 1; /* Occupa lo spazio rimanente tra header e footer */
+  display: flex;
+  flex-direction: column;
 }
 
 .page-container {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
-/* Imposta Flexbox per la struttura globale */
-html, body {
-    height: 100%; /* Altezza completa dello schermo */
-    margin: 0; /* Rimuove margini indesiderati */
-    overflow-x: hidden; /* Nasconde lo scorrimento orizzontale */
-    display: flex;
-    flex-direction: column; /* Disposizione verticale: header, contenuto, footer */
-  }  
-  
-  /* Applica flexbox alla struttura interna */
-  app-root {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* Occupa lo spazio disponibile */
-  }
-  
-  /* Contenitore del contenuto */
+app-footer {
+  flex-shrink: 0; /* Fissa il footer in basso */
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* Stili aggiuntivi */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+button, .btn {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-primary);
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   main {
-    flex: 1; /* Espandi il contenitore principale per riempire lo spazio */
-    display: flex;
-    flex-direction: column;
+    padding: 0 15px;
   }
-  
-  /* Footer sticky */
+
+  button, .btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .page-container {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  button, .btn {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .page-container {
+    margin-top: 60px;
+  }
+
   app-footer {
-    flex-shrink: 0; /* Impedisce che il footer venga compresso */
-    background-color: var(--color-primary);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
+    font-size: 14px;
   }
-  
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main {
+    padding: 0 30px;
+  }
+
+  button, .btn {
+    font-size: 18px;
+    padding: 10px 18px;
+  }
+
+  .page-container {
+    margin-top: 70px;
+  }
+}

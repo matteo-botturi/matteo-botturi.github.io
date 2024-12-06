@@ -1,6 +1,5 @@
-/* Footer - Base styles */
 .page-footer {
-  background-color: #335384;
+  background-color: var(--color-primary);
   color: white;
   padding: 20px 0;
 }
@@ -23,24 +22,23 @@
   display: flex;
   justify-content: flex-end;
   gap: 20px;
-  flex-wrap: wrap; /* Permette di andare a capo se necessario */
+  flex-wrap: wrap;
 }
 
 .quick-links li a {
-  color: #b0c4de;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-.quick-links li a:hover {
-  color: #ffffff;
+.quick-links li a:hover,
+.quick-links li a:focus {
+  color: white;
   text-decoration: underline;
 }
 
 .footer-copyright {
   background-color: #2c3e50;
-  color: #b0c4de;
   padding: 10px 0;
   font-size: 0.9rem;
   text-align: center;
@@ -48,43 +46,57 @@
 
 .social-links {
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .icon-link {
   width: 35px;
   height: 35px;
-  margin: 0 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   border-radius: 50%;
-  padding: 1px;
+  padding: 2px;
   background-color: white;
 }
 
-.icon-link:hover {
+.icon-link:hover,
+.icon-link:focus {
   transform: scale(1.2);
   background-color: var(--color-secondary-hover);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .page-footer .row {
-    flex-direction: column; /* Disposizione verticale */
+    flex-direction: column;
     align-items: center;
-    text-align: center; /* Centralizza il testo */
+    text-align: center;
   }
 
   .page-footer .col {
-    width: 100%; /* Ogni colonna occupa l'intera larghezza */
-    margin-bottom: 20px; /* Spaziatura tra le sezioni */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .quick-links {
-    justify-content: center; /* Centra i link nella versione mobile */
+    justify-content: center;
   }
 
-  .footer-buttons{
+  .footer-buttons {
     align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .icon-link {
+    width: 30px;
+    height: 30px;
   }
 }

@@ -36,6 +36,12 @@
   background-color: #fff;
 }
 
+.card-content h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
 .card-content .btn-small {
   margin-top: 10px;
   text-transform: uppercase;
@@ -45,26 +51,29 @@
   color: white;
   border-radius: 4px;
   text-decoration: none;
-  display: flex; /* Usato per il centramento verticale */
-  justify-content: center; /* Allineamento orizzontale */
-  align-items: center; /* Allineamento verticale */
-  height: 40px; /* Altezza fissa per il pulsante */
-  width: 100%; /* Imposta la larghezza del pulsante */
-  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.card-content .btn-small:hover {
+.card-content .btn-small:hover,
+.card-content .btn-small:focus {
   background-color: #3a8cb7;
+  transform: scale(1.05);
 }
 
 .card-content .btn-small.disabled {
-  background-color: #ddd; /* Colore grigio per il pulsante disabilitato */
-  cursor: not-allowed; /* Cambia il cursore per mostrare che è disabilitato */
-  pointer-events: none; /* Disabilita i clic */
+  background-color: #ddd;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #aaa;
 }
 
 .card-content .btn-small.disabled:hover {
-  background-color: #ddd; /* Non cambierà colore al passaggio del mouse */
+  background-color: #ddd;
 }
 
 .chips {
@@ -81,15 +90,14 @@
   font-size: 0.9rem;
   border-radius: 15px;
   text-transform: capitalize;
-  color: #fff;  /* Imposta il colore del testo su bianco per una buona leggibilità */
-  display: inline-block; /* Garantisce che le chips siano inline */
-  margin: 4px; /* Distanza tra le chips */
+  color: #fff;
+  display: inline-block;
+  margin: 4px;
+  background-color: #335384;
 }
 
-/* Assicurati che le card non siano più piccole di un certo limite */
-.col.s12.m6.l6 {
-  flex: 0 0 calc(50% - 10px); /* Mostra due card per riga */
-  max-width: calc(50% - 10px); /* Evita che le card siano troppo larghe */
+.chips .chip:hover {
+  background-color: #3a8cb7;
 }
 
 .load-more-container {
@@ -97,8 +105,8 @@
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center; /* Allineamento orizzontale */
-  align-items: center; /* Allineamento verticale */
+  justify-content: center;
+  align-items: center;
 }
 
 .load-more-container .btn-small {
@@ -109,27 +117,36 @@
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
-  
-  align-items: center; /* Allineamento verticale */
-
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .load-more-container .btn-small:hover {
   background-color: #3a8cb7;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .col.s12.m6.l4 {
+    flex: 0 0 calc(50% - 10px); /* Due card per riga */
+    max-width: calc(50% - 10px);
+  }
 }
 
 @media (max-width: 768px) {
-  .card {
+  .col.s12.m6.l4 {
+    flex: 0 0 100%; /* Una card per riga */
     max-width: 100%;
+  }
+
+  .card {
     height: auto;
   }
 
-  .card-image {
-    height: auto;
-  }
-
-  .row {
-    flex-direction: column;
-    align-items: center;
+  .chips .chip {
+    font-size: 0.8rem;
+    padding: 4px 8px;
   }
 }

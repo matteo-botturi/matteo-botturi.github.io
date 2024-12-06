@@ -1,37 +1,38 @@
 <div class="hero-section">
-  <div class="row page-container">
-    <!-- Colonna foto -->
-    <div class="col s12 m6 hero-image ">
-      <img id="logo" src="../../../assets/images/home/home-photo.webp" alt="Matteo Botturi photo" class="responsive-img">
-      
-      <div class="carousel carousel-slider">
+  <div class="row">
+    <!-- Colonna Foto e Carousel -->
+    <div class="col s12 l6">
+      <div class="hero-image center-align">
+        <img class="hero-photo responsive-img" src="assets/images/home/home-photo.webp" alt="Portrait de Matteo Botturi">
+      </div>
+      <div class="carousel carousel-slider center-align">
         <div class="carousel-item">
           <button class="btn-large cta-button" (click)="goToPage('/projects')">Découvrez mes projets</button>
         </div>
         <div class="carousel-item">
           <button class="btn-large cta-button" (click)="goToPage('/skills')">Mes compétences</button>
         </div>
-        <div class="carousel-item">
-          <button class="btn-large cta-button" (click)="goToPage('/contact')">Contactez-moi</button>
-        </div>
       </div>
-
     </div>
-    <!-- Colonna testo -->
-    <div class="col s12 m6 hero-text">
-      <h1>Bonjour, je suis Matteo Botturi</h1>
-      <h3>Développeur Full Stack</h3>
-      <p>
-        Passionné par le développement web, la création d’interfaces intuitives et les technologies innovantes.
-        Toujours prêt à relever de nouveaux défis et à apprendre.
-      </p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" aria-label="LinkedIn">
-          <img src="../../../assets/images/home/linkedin.webp" alt="LinkedIn" class="icon-link">
-        </a>
-        <a href="https://github.com/matteo-botturi/" target="_blank" aria-label="GitHub">
-          <img src="../../../assets/images/home/github.webp" alt="GitHub" class="icon-link">
-        </a>
+
+    <!-- Colonna Testo -->
+    <div class="col s12 l6">
+      <div class="hero-text">
+        <h1>Bonjour, je suis Matteo Botturi</h1>
+        <h3>Développeur Full Stack</h3>
+        <p>
+          Passionné par le développement web, la création d’interfaces intuitives et les technologies innovantes.
+          Toujours prêt à relever de nouveaux défis et à apprendre.
+        </p>
+        <h5>Contactez moi</h5>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" aria-label="LinkedIn">
+            <img src="assets/images/home/linkedin.webp" alt="Profil LinkedIn" class="icon-link">
+          </a>
+          <a href="https://github.com/matteo-botturi/" target="_blank" aria-label="GitHub">
+            <img src="assets/images/home/github.webp" alt="Profil GitHub" class="icon-link">
+          </a>
+        </div>
       </div>
     </div>
   </div>

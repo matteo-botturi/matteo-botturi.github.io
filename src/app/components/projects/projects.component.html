@@ -7,7 +7,6 @@
         </div>
         <div class="card-content">
           <h5>{{ project.name }}</h5>
-          <!-- Descrizione opzionale -->
           <div *ngIf="project.description" class="project-description">
             <p>{{ project.description }}</p>
           </div>
@@ -30,8 +29,6 @@
       </article>
     </div>
   </div>
-
-  <!-- Pulsante per caricare altri progetti -->
   <div *ngIf="visibleProjects < projects.length" class="load-more-container">
     <button (click)="loadMoreProjects()" class="btn-small">Charger plus</button>
   </div>

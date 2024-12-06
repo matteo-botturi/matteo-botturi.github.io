@@ -27,17 +27,20 @@ h5 {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .timeline {
     padding: 0;
     list-style: none;
     position: relative;
+    margin-top: 20px;
 }
 
 .timeline:before {
@@ -47,8 +50,8 @@ p {
     top: 0;
     bottom: 0;
     width: 4px;
-    background: #3a8cb7;
-    
+    background: var(--color-primary-hover);
+    z-index: 0;
 }
 
 .timeline-item {
@@ -72,16 +75,31 @@ p {
     top: 0;
     width: 16px;
     height: 16px;
-    background: #3a8cb7;
+    background: var(--color-primary-hover);
     border-radius: 50%;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
 }
+
+.timeline-item:hover:before {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
 
 .timeline-item h6 {
     margin-bottom: 10px;
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+.timeline-item p {
+    font-size: 1rem;
+    color: var(--color-text);
+    text-align: justify;
+    padding: 0 20px;
+    margin-top: 5px;
+  }
 
 @media screen and (max-width: 768px) {
     .flex-column-on-small {
@@ -96,5 +114,16 @@ p {
     .col {
         width: 100%;
         max-width: none;
+    }
+
+    .timeline-item p {
+        padding: 0;
+        text-align: justify;
+      }
+}
+
+@media screen and (max-width: 1024px) {
+    .page-container {
+      padding: 15px;
     }
 }

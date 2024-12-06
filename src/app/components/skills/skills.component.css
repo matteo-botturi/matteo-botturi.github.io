@@ -1,5 +1,7 @@
-.page-header{
+/* Generale */
+.page-header {
   text-align: center;
+  margin: 20px 0;
 }
 
 .dropdown-container {
@@ -15,16 +17,22 @@
   text-transform: uppercase;
   font-weight: bold;
   padding: 15px 20px;
-  border: 1px solid;
+  border: 1px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Adatta il bottone alla larghezza del contenitore */
-  max-width: 350px; /* Limita la larghezza su schermi più grandi */
-  box-sizing: border-box; /* Include padding e border nella larghezza */
-  overflow: hidden; /* Evita che il contenuto esca dal bottone */
-  white-space: nowrap; /* Evita il ritorno a capo */
-  text-overflow: ellipsis; /* Mostra "..." per il testo troppo lungo */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dropdown-trigger:hover,
+.dropdown-trigger:focus {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-trigger i {
@@ -37,8 +45,8 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; /* Adatta la larghezza del menu */
-  max-width: 350px; /* Limita la larghezza su schermi più grandi */
+  width: 100%;
+  max-width: 350px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -46,13 +54,19 @@
   margin: 0;
   padding: 0;
   z-index: 1000;
-  overflow-y: auto; /* Scroll se ci sono troppe voci */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 .dropdown-menu li {
-  padding: 10px 15px; /* Area cliccabile più grande */
+  padding: 10px 15px;
   cursor: pointer;
   text-align: center;
+}
+
+.dropdown-menu li:hover,
+.dropdown-menu li:focus {
+  background-color: #f7f7f7;
 }
 
 .dropdown-menu li a {
@@ -61,19 +75,19 @@
   width: 100%;
   color: inherit;
   font-size: 1rem;
-  white-space: nowrap; /* Evita il ritorno a capo */
-  overflow: hidden; /* Evita il testo fuori dai limiti */
-  text-overflow: ellipsis; /* Mostra "..." per il testo lungo */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Skills Container */
 .skills-container {
   margin: 20px auto;
-  padding: 0 15px;
+  padding: 0 5px;
   max-width: 1200px;
 }
 
 .category h2 {
-  color: var(--color-secondary);
   font-size: 1.5rem;
   margin-bottom: 20px;
   text-align: left;
@@ -81,9 +95,9 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  justify-content: center; /* Centra le card orizzontalmente */
+  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr)); /* Layout dinamico */
+  gap: 10px;
+  justify-content: center; /* Centra la griglia */
 }
 
 .skill-item {
@@ -93,8 +107,8 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,61 +117,62 @@
 }
 
 .skill-item img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   margin-bottom: 10px;
 }
 
-.skill-item:hover {
+.skill-item:hover,
+.skill-item:focus {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Centra le card in versione mobile */
-@media screen and (max-width: 768px) {
-  .category {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra tutto il contenuto */
-    margin-bottom: 40px;
-  }
+/* ResponsivitÃ  */
 
-  .skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra le card orizzontalmente */
-    margin: 0 auto; /* Centra le card rispetto alla pagina */
-  }
-
-  .card {
-    width: 90%; /* Larghezza relativa per adattarsi allo schermo */
-    max-width: 350px; /* Limita la larghezza massima */
-    margin-bottom: 20px; /* Spaziatura tra le card */
-  }
-
-  .dropdown-container {
-    width: 100%; /* Adatta la larghezza del contenitore */
-    text-align: center; /* Centra il contenuto */
-    margin-bottom: 20px;
-  }
-
-  .dropdown-trigger {
-    width: 90%; /* Aumenta la larghezza del pulsante */
-    max-width: 350px; /* Limita la larghezza massima */
-    padding: 15px; /* Aumenta l'area cliccabile */
-    font-size: 1.2rem; /* Testo più grande */
-    border-radius: 8px; /* Angoli arrotondati per migliorare l'usabilità */
-    text-align: center;
-  }
-
-  .dropdown-menu li a {
-    font-size: 1.2rem; /* Testo più leggibile */
-    padding: 10px 15px; /* Maggior spazio cliccabile */
+/* Smartphone: 2 card per riga */
+@media screen and (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .category h2 {
     text-align: center;
-    margin-bottom: 20px;
+  }
+}
+
+/* Tablet verticali: 3 card per riga, margini maggiori */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .skills-container {
+    padding: 0 30px; /* Aumenta i margini laterali */
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; /* PiÃ¹ spazio tra le card */
+  }
+
+  .category h2 {
+    text-align: center; /* Titoli centrati */
+  }
+}
+
+/* Tablet orizzontali: 4 card per riga */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category h2 {
+    text-align: center;
+  }
+}
+
+/* Desktop: 4 o piÃ¹ card per riga */
+@media screen and (min-width: 1025px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
   }
 }

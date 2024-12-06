@@ -9,7 +9,7 @@ import { Router, RouterModule } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements AfterViewInit{
-  private sidenavInstance!: MaterializeSidenav;
+  private sidenavInstance!: MaterializeSidenav | null;
   
   constructor(private router: Router) {}
 
