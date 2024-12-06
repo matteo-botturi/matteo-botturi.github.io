@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,15 +19,9 @@ export class HomeComponent implements OnInit{
   currentIndex = 0;
   cursorIndex = 0;
 
-  constructor(private router: Router, private titleService: Title, private metaService: Meta) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Accueil - Matteo Botturi');
-    this.metaService.updateTag({
-      name: 'description',
-      content: 'Bienvenue sur le portfolio de Matteo Botturi, un développeur Full Stack passionné par le développement web, l\'innovation et la création d\'interfaces intuitives.'
-    });
-    this.metaService.updateTag({ name: 'keywords', content: 'développeur, portfolio, compétences, projets, full stack, web' });
     this.typeNextText();
   }
 

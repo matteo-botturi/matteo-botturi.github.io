@@ -3,7 +3,6 @@ import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { SKILLS_DATA } from './skills.data';
 import { Category } from '../../category';
 import { Skill } from '../../skill';
-import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-skills',
@@ -12,23 +11,7 @@ import { Meta, Title } from '@angular/platform-browser';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent implements OnInit{
-
-  constructor(private titleService: Title, private metaService: Meta){}
-
-  ngOnInit(): void {
-    this.titleService.setTitle('Compétences - Matteo Botturi');
-
-    this.metaService.updateTag({
-      name: 'description',
-      content: 'Explorez les compétences techniques de Matteo Botturi, de la programmation Front-End à la gestion des bases de données, en passant par le développement Full Stack et les technologies modernes.'
-    });
-
-    this.metaService.updateTag({
-      name: 'keywords',
-      content: 'compétences, full stack, développement, front-end, back-end, technologies'
-    });
-  }
+export class SkillsComponent {
 
   categories: Category[] = SKILLS_DATA;
   selectedCategory: Category | null = null;
