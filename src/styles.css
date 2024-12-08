@@ -9,6 +9,7 @@
   --color-secondary-hover: #ffd54f;
   --font-primary: 'Montserrat', sans-serif;
   --nav-height: 64px;
+  color-scheme: light;
 }
 
 * {
