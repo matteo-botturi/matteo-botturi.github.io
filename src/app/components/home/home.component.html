@@ -3,11 +3,26 @@
     <div class="col s12 m6">
       <div class="hero-image center-align">
         <picture>
-          <source srcset="assets/images/home/hero200.webp" media="(max-width: 480px)" type="image/webp">
-          <source srcset="assets/images/home/hero300.webp" media="(max-width: 768px)" type="image/webp">
-          <source srcset="assets/images/home/hero400.webp" media="(min-width: 769px)" type="image/webp">
+          <source srcset="
+            assets/images/home/hero200.webp 1x,
+            assets/images/home/hero400.webp 2x" 
+            media="(max-width: 480px)" 
+            type="image/webp">
+          <source srcset="
+            assets/images/home/hero300.webp 1x,
+            assets/images/home/hero600.webp 2x" 
+            media="(max-width: 768px)" 
+            type="image/webp">
+          <source srcset="
+            assets/images/home/hero400.webp 1x,
+            assets/images/home/hero800.webp 2x" 
+            media="(min-width: 769px)" 
+            type="image/webp">
           <img 
             src="assets/images/home/hero400.webp" 
+            srcset="
+              assets/images/home/hero400.webp 1x,
+              assets/images/home/hero800.webp 2x"
             alt="Portrait de Matteo Botturi" 
             class="hero-photo responsive-img">
         </picture>
