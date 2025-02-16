@@ -1,6 +1,6 @@
 export const SKILLS_DATA = [
   {
-    name: "Langages",
+    name: "LANGAGES",
     skills: [
       { name: "Java", imageUrl: "assets/images/skills/java.webp" },
       { name: "Typescript", imageUrl: "assets/images/skills/typescript.webp" },
@@ -12,7 +12,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    name: "Frameworks et Bibliothèques",
+    name: "FRAMEWORKS_LIBRARIES",
     skills: [
       { name: "Angular", imageUrl: "assets/images/skills/angular.webp" },
       { name: "Materialize", imageUrl: "assets/images/skills/materialize.webp" },
@@ -24,7 +24,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    name: "Tests",
+    name: "TESTS",
     skills: [
       { name: "JUnit", imageUrl: "assets/images/skills/junit.webp" },
       { name: "Mockito", imageUrl: "assets/images/skills/mockito.webp" },
@@ -32,14 +32,14 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    name: "Bases de Données",
+    name: "DB",
     skills: [
       { name: "PostgreSQL", imageUrl: "assets/images/skills/postgresql.webp" },
       { name: "SQL Server", imageUrl: "assets/images/skills/sqlserver.webp" },
     ],
   },
   {
-    name: "API et Sécurité",
+    name: "API_SECURITY",
     skills: [
       { name: "API REST", imageUrl: "assets/images/skills/apirest.webp" },
       { name: "OpenAPI", imageUrl: "assets/images/skills/openapi.webp" },
@@ -47,7 +47,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    name: "DevOps et Outils",
+    name: "DEVOPS_TOOLS",
     skills: [
       { name: "Git", imageUrl: "assets/images/skills/git.webp" },
       { name: "Docker", imageUrl: "assets/images/skills/docker.webp" },
@@ -56,7 +56,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    name: "Environnements",
+    name: "IDE",
     skills: [
       { name: "Eclipse IDE", imageUrl: "assets/images/skills/eclipse.webp" },
       { name: "IntelliJ IDEA", imageUrl: "assets/images/skills/intellij.webp" },
@@ -64,7 +64,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    name: "Méthodologies",
+    name: "METHODOLOGIES",
     skills: [
       { name: "Microservices", imageUrl: "assets/images/skills/microservices.webp" },
       { name: "Agile", imageUrl: "assets/images/skills/agile.webp" },

@@ -1,13 +1,14 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { SKILLS_DATA } from './skills.data';
 import { Category } from '../../category';
 import { Skill } from '../../skill';
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NgFor, NgIf, CommonModule],
+  imports: [NgFor, NgIf, CommonModule, TranslatePipe],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })

@@ -1,45 +1,78 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" data-target="mobile-menu" class="sidenav-trigger left" aria-label="Ouvrir le menu mobile">
+      <a href="#" data-target="mobile-menu" class="sidenav-trigger left" [attr.aria-label]="'header.open_menu' | translate">
         <i class="material-icons">menu</i>
       </a>
       <ul id="nav-desktop" class="center hide-on-med-and-down">
         <li>
-          <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-label="Aller à la page d'accueil">Accueil</a>
+          <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" 
+             [attr.aria-label]="'menu.home' | translate">
+            {{ 'menu.home' | translate }}
+          </a>
         </li>
         <li>
-          <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-label="Aller à la page À propos">À propos</a>
+          <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" 
+             [attr.aria-label]="'menu.about' | translate">
+            {{ 'menu.about' | translate }}
+          </a>
         </li>
         <li>
-          <a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-label="Aller à la page Compétences">Compétences</a>
+          <a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" 
+             [attr.aria-label]="'menu.skills' | translate">
+            {{ 'menu.skills' | translate }}
+          </a>
         </li>
         <li>
-          <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" aria-label="Aller à la page Projets">Projets</a>
+          <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" 
+             [attr.aria-label]="'menu.projects' | translate">
+            {{ 'menu.projects' | translate }}
+          </a>
         </li>
       </ul>
+
+      <div class="language-switcher">
+        <a (click)="changeLanguage('fr')" [attr.aria-label]="'header.change_language_fr' | translate">
+          <img src="assets/images/header/fra_30x20.webp" [alt]="'header.change_language_fr' | translate" class="flag">
+        </a>
+        <a (click)="changeLanguage('it')" [attr.aria-label]="'header.change_language_it' | translate">
+          <img src="assets/images/header/ita_30x20.webp" [alt]="'header.change_language_it' | translate" class="flag">
+        </a>
+      </div>
+
     </div>
   </nav>
 </div>
-<ul id="mobile-menu" class="sidenav" aria-label="Navigation du menu mobile">
+
+<ul id="mobile-menu" class="sidenav" [attr.aria-label]="'header.navigation' | translate">
   <li>
-    <a routerLink="/home" routerLinkActive="active" (click)="closeSidenav()" aria-label="Aller à la page d'accueil">Accueil</a>
+    <a routerLink="/home" routerLinkActive="active" (click)="closeSidenav()" [attr.aria-label]="'menu.home' | translate">
+      {{ 'menu.home' | translate }}
+    </a>
   </li>
   <li>
-    <a routerLink="/about" routerLinkActive="active" (click)="closeSidenav()" aria-label="Aller à la page d'accueil À propos">À propos</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="closeSidenav()" [attr.aria-label]="'menu.about' | translate">
+      {{ 'menu.about' | translate }}
+    </a>
   </li>
   <li>
-    <a routerLink="/skills" routerLinkActive="active" (click)="closeSidenav()" aria-label="Aller à la page d'accueil Compétences">Compétences</a>
+    <a routerLink="/skills" routerLinkActive="active" (click)="closeSidenav()" [attr.aria-label]="'menu.skills' | translate">
+      {{ 'menu.skills' | translate }}
+    </a>
   </li>
   <li>
-    <a routerLink="/projects" routerLinkActive="active" (click)="closeSidenav()" aria-label="Aller à la page d'accueil Projets">Projets</a>
+    <a routerLink="/projects" routerLinkActive="active" (click)="closeSidenav()" [attr.aria-label]="'menu.projects' | translate">
+      {{ 'menu.projects' | translate }}
+    </a>
   </li>
   <li class="social-links-mobile">
-    <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn">
-      <img src="assets/images/home/linkedin.webp" alt="Profilo LinkedIn" class="icon-link">
+    <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" rel="noopener noreferrer" 
+       [attr.aria-label]="'social.linkedin' | translate">
+      <img src="assets/images/home/linkedin.webp" [alt]="'social.linkedin' | translate" class="icon-link">
     </a>
-    <a href="https://github.com/matteo-botturi/" target="_blank" rel="noopener noreferrer" aria-label="Profile GitHub">
-      <img src="assets/images/home/github.webp" alt="Profilo GitHub" class="icon-link">
+    <a href="https://github.com/matteo-botturi/" target="_blank" rel="noopener noreferrer" 
+       [attr.aria-label]="'social.github' | translate">
+      <img src="assets/images/home/github.webp" [alt]="'social.github' | translate" class="icon-link">
     </a>
   </li>
 </ul>

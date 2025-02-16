@@ -23,7 +23,7 @@
             srcset="
               assets/images/home/hero400.webp 1x,
               assets/images/home/hero800.webp 2x"
-            alt="Portrait de Matteo Botturi" 
+            [alt]="'home.hero_alt' | translate" 
             class="hero-photo responsive-img">
         </picture>
       </div>
@@ -31,48 +31,46 @@
         <button 
           class="btn-large cta-button" 
           (click)="goToPage('/projects')" 
-          aria-label="Voir mes projets">
-          Mes Projets
+          [attr.aria-label]="'home.first_button' | translate">
+          {{ 'home.first_button' | translate }}
         </button>
         <button 
           class="btn-large cta-button secondary" 
           (click)="goToPage('/skills')" 
-          aria-label="Voir mes compétences">
-          Mes Compétences
+          [attr.aria-label]="'home.second_button' | translate">
+          {{ 'home.second_button' | translate }}
         </button>
       </div>
     </div>
+    
     <div class="col s12 m6">
       <div class="hero-text">
-        <h1 tabindex="0">Bonjour, je suis Matteo Botturi</h1>
+        <h1 tabindex="0">{{ 'home.title' | translate }}</h1>
         <p class="animated-text" aria-live="polite">
           {{ currentText }}
           <span class="cursor" aria-hidden="true">|</span>
         </p>
-        <p>
-          Passionné par le développement web, la création d’interfaces intuitives et les technologies innovantes.
-          Toujours prêt à relever de nouveaux défis et à apprendre.
-        </p>
-        <h2>Contactez-moi</h2>
+        <p>{{ 'home.description' | translate }}</p>
+        <h2>{{ 'home.alert' | translate }}</h2>
         <div class="social-links">
           <a 
             href="https://www.linkedin.com/in/matteo-botturi/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            aria-label="Lien vers LinkedIn">
+            [attr.aria-label]="'social.linkedin' | translate">
             <img 
               src="assets/images/home/linkedin.webp" 
-              alt="Profil LinkedIn" 
+              [alt]="'social.linkedin' | translate" 
               class="icon-link">
           </a>
           <a 
             href="https://github.com/matteo-botturi/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            aria-label="Lien vers GitHub">
+            [attr.aria-label]="'social.github' | translate">
             <img 
               src="assets/images/home/github.webp" 
-              alt="Profil GitHub" 
+              [alt]="'social.github' | translate" 
               class="icon-link">
           </a>
         </div>

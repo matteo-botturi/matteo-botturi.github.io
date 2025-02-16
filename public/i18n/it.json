@@ -1,0 +1,101 @@
+{
+    "menu": {
+        "home": "Home",
+        "about": "Chi Sono",
+        "skills": "Competenze",
+        "projects": "Progetti"
+    },
+
+    "header": {
+        "open_menu": "Apri il menu mobile",
+        "navigation": "Navigazione del menu mobile",
+        "change_language_fr": "Cambia lingua in francese",
+        "change_language_it": "Cambia lingua in italiano"
+    },
+
+    "footer": {
+        "copyrights": "© 2025 - Tutti i diritti riservati",
+        "signature": "Realizzato con 💖 da Matteo",
+        "sign": "Portfolio realizzato da Matteo Botturi.",
+        "social_links": "Collegamenti ai social network",
+        "navigation_links": "Collegamenti di navigazione",
+        "logo_alt": "Logo di Matteo Botturi"
+    },
+
+    "footer_desc": {
+        "home": "Torna alla home page di Matteo Botturi, Portfolio",
+        "about": "Scopri di più su Matteo Botturi, il suo percorso e la sua esperienza",
+        "skills": "Esplora le competenze e le tecnologie padroneggiate da Matteo Botturi",
+        "projects": "Scopri i progetti realizzati da Matteo Botturi"
+  },
+
+    "social": {
+        "linkedin": "Profilo LinkedIn di Matteo Botturi",
+        "github": "Profilo GitHub di Matteo Botturi"
+    },
+
+    "home":{
+        "first_button": "I miei progetti",
+        "second_button": "Le mie Competenze",
+        "title": "Ciao, sono Matteo",
+        "description": "Appassionato di sviluppo web, creazione di interfacce intuitive e tecnologie innovative. Sempre pronto ad affrontare nuove sfide e ad apprendere.",
+        "alert": "Contattami",
+        "hero_alt": "Ritratto di Matteo Botturi"
+    },
+
+    "about": {
+        "title": "Chi Sono",
+        "first_paragraph": "Sono uno sviluppatore Full-Stack, appassionato di innovazione e sviluppo di applicazioni performanti. Diplomato in Sviluppo di Applicazioni Java (equivalente a Laurea Triennale), mi specializzo nel back-end con Java, Spring e Quarkus, mentre rafforzo le mie competenze nel front-end con Angular.",
+        "second_paragraph": "Durante la mia formazione e il mio stage di tre mesi nel settore immobiliare, ho partecipato allo sviluppo di un'API REST con Spring Boot per l'automazione dei contratti di locazione, integrando il riempimento automatico dei campi degli inquilini e la gestione dei dati con PostgreSQL. Ho anche contribuito all'ottimizzazione e al perfezionamento delle interfacce con Angular e Materialize.",
+        "third_paragraph": "Parallelamente, ho sviluppato un microservizio di autenticazione sicuro con Quarkus, occupandomi di aspetti chiave della sicurezza, tra cui la codifica dei dati e la gestione dei token di accesso.",
+        "fourth_paragraph": "Polivalente e adattabile, mi integro facilmente in diversi ambienti tecnici. Il mio percorso mi ha permesso di acquisire competenze trasversali come la gestione delle priorità, l'organizzazione e il lavoro di squadra, essenziali in un contesto Agile. Curioso e rigoroso, ho una grande capacità di apprendimento e sono sempre pronto a affrontare nuove sfide. Anche se preferisco Java, sono aperto a lavorare con altri linguaggi orientati agli oggetti.",
+        "fifth_paragraph": "Sempre in cerca di evoluzione, mi formo regolarmente tramite corsi online su Coursera e progetti pratici, per approfondire le mie conoscenze e ampliare il mio campo di competenze."
+    },
+
+    "error": {
+        "title": "Errore 404",
+        "phrase": "Oops! La pagina che stai cercando non esiste.",
+        "button": "Torna alla home"
+    },
+
+    "skills": {
+        "title": "Le mie competenze tecniche",
+        "first_menu_option": "Tutte le categorie",
+        "category_label": "Competenze in {{category}}",
+        "selected_skills": "Competenze selezionate",
+        "icon_alt": "Icona di {{skill}}"
+    },
+    "LANGAGES": "Linguaggi",
+    "FRAMEWORKS_LIBRARIES": "Framework e Librerie",
+    "TESTS": "Test",
+    "DB": "Database",
+    "API_SECURITY": "API & Sicurezza",
+    "DEVOPS_TOOLS": "Strumenti & DevOps",
+    "IDE": "IDE",
+    "METHODOLOGIES": "Metodologie",
+
+    "projects": {
+        "button_git": "Vai su github",
+        "button_lazy": "Carica altro",
+        "card_aria": "Scheda progetto",
+        "image_alt": "Immagine del progetto: {{name}}",
+        "tech_used": "Tecnologie utilizzate",
+        "work_in_progress": "Lavori in corso"
+    },
+    "PROJECT_BREW_SHOP": "Negozio di Birre",
+    "PROJECT_BREW_SHOP_DESC": "API per la gestione di birre, vendite, magazzino e relazioni associate.",
+    "PROJECT_RUBRIQUE": "Rubrica",
+    "PROJECT_RUBRIQUE_DESC": "Applicazione JavaFX con funzioni di ricerca e salvataggio.",
+    "PROJECT_POKEDEX": "Pokédex",
+    "PROJECT_POKEDEX_DESC": "Applicazione web per consultare informazioni sui Pokémon.",
+    "PROJECT_POKER": "Poker Game",
+    "PROJECT_POKER_DESC": "Poker in Java con gestione delle mani e risoluzione dei pareggi.",
+    "PROJECT_AUTH": "Authentification",
+    "PROJECT_AUTH_DESC": "Microservizio per la sicurezza API e gestione degli utenti.",
+    "PROJECT_MAGNA": "Magna Carta",
+    "PROJECT_MAGNA_DESC": "Proposte di ricette personalizzate in base agli obiettivi nutrizionali.",
+    "PROJECT_HOUSE": "Gestione locativa",
+    "PROJECT_HOUSE_DESC": "Applicazione di gestione dei contratti di locazione con generazione di documenti.",
+    "PROJECT_CHEESE": "Cheese Stock Image",
+    "PROJECT_CHEESE_DESC": "Piattaforma di gestione e vendita di immagini."
+}

@@ -1,5 +1,5 @@
 <div class="page-header page-container">
-  <h2 id="stack-title">Mon stack technique</h2>
+  <h2 id="stack-title">{{ 'skills.title' | translate }}</h2>
 </div>
 
 <div class="dropdown-container">
@@ -9,7 +9,7 @@
     [attr.aria-expanded]="dropdownOpen"
     aria-haspopup="true"
     aria-controls="category-menu">
-    {{ selectedCategory?.name || 'Tout' }}
+    {{ selectedCategory?.name || ('skills.first_menu_option' | translate) }}
     <i class="material-icons" aria-hidden="true">expand_more</i>
   </button>
   <ul 
@@ -19,10 +19,10 @@
     id="category-menu"
     aria-labelledby="stack-title">
     <li (click)="showAllSkills($event)">
-      <a href="#" role="menuitem">Tout</a>
+      <a href="#" role="menuitem">{{ 'skills.first_menu_option' | translate }}</a>
     </li>
     <li *ngFor="let category of categories" (click)="selectCategory(category, $event)">
-      <a href="#" role="menuitem">{{ category.name }}</a>
+      <a href="#" role="menuitem">{{ category.name | translate }}</a>
     </li>
   </ul>
 </div>
@@ -30,10 +30,10 @@
 <div class="skills-container">
   <ng-container *ngIf="!selectedCategory; else singleCategory">
     <div *ngFor="let category of categories" class="category" [id]="'category-' + category.name">
-      <h5>{{ category.name }}</h5>
-      <div class="skills-grid" role="list" [attr.aria-label]="'Compétences en ' + category.name">
+      <h5>{{ category.name | translate }}</h5>
+      <div class="skills-grid" role="list" [attr.aria-label]="'skills.category_label' | translate:{ category: category.name }">
         <div *ngFor="let skill of category.skills" class="skill-item" role="listitem">
-          <img [src]="skill.imageUrl" [alt]="'Icone de ' + skill.name">
+          <img [src]="skill.imageUrl" [alt]="'skills.icon_alt' | translate:{ skill: skill.name }">
           <p>{{ skill.name }}</p>
         </div>
       </div>
@@ -41,11 +41,12 @@
   </ng-container>
 
   <ng-template #singleCategory>
-    <div class="skills-grid" role="list" aria-label="Compétences sélectionnées">
+    <div class="skills-grid" role="list" [attr.aria-label]="'skills.selected_skills' | translate">
       <div *ngFor="let skill of getSkills()" class="skill-item" role="listitem">
-        <img [src]="skill.imageUrl" [alt]="'Icone de ' + skill.name">
+        <img [src]="skill.imageUrl" [alt]="'skills.icon_alt' | translate:{ skill: skill.name }">
         <p>{{ skill.name }}</p>
       </div>
     </div>
   </ng-template>
 </div>
+

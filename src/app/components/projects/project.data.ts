@@ -2,57 +2,57 @@ import { Project } from "../../project";
 
 export const PROJECTS: Project[] = [
     {
-      name: 'Brew Shop',
-      description: 'API de gestion des bières, ventes, stock et relations associées.',
+      name: 'PROJECT_BREW_SHOP',
+      description: 'PROJECT_BREW_SHOP_DESC',
       image: 'assets/images/projects/beer.webp',
       link: 'https://github.com/matteo-botturi/brewshop',
       chips: ['Java', 'Quarkus', 'SQL']
     },
     {
-      name: 'Rubrique',
-      description: 'Rubrique JavaFX avec fonctions de recherche et sauvegarde.',
+      name: 'PROJECT_RUBRIQUE',
+      description: 'PROJECT_RUBRIQUE_DESC',
       image: 'assets/images/projects/rubrique.webp',
       link: 'https://github.com/matteo-botturi/rubrique',
       chips: ['Java', 'JavaFX', 'CSS']
     },
     {
-      name: 'Pokédex',
-      description: 'Application web pour consulter des informations sur des Pokémon.',
+      name: 'PROJECT_POKEDEX',
+      description: 'PROJECT_POKEDEX_DESC',
       image: 'assets/images/projects/pokedex.webp',
       link: 'https://github.com/matteo-botturi/pokedex-angular',
       chips: ['Angular']
     },
     {
-      name: 'Poker Game',
-      description: "Poker en Java avec gestion des mains et résolutions d'égalités.",
+      name: 'PROJECT_POKER',
+      description: "PROJECT_POKER_DESC",
       image: 'assets/images/projects/poker.webp',
       link: 'https://github.com/matteo-botturi/poker',
       chips: ['Java']
     },
     {
-      name: 'Authentification',
-      description: "Microservice pour la sécurisation API et gestion des utilisateurs.",
+      name: 'PROJECT_AUTH',
+      description: "PROJECT_AUTH_DESC",
       image: 'assets/images/projects/security.webp',
       link: '#',
       chips: ['Java', 'Quarkus', 'SQL']
     },
     {
-      name: 'Magna Carta',
-      description: 'Propositions de recettes personnalisées selon les objectifs nutritionnels.',
+      name: 'PROJECT_MAGNA',
+      description: 'PROJECT_MAGNA_DESC',
       image: 'assets/images/projects/recipe.webp',
       link: '#',
       chips: ['Spring', 'Angular', 'SQL']
     },
     {
-      name: 'Gestion locative',
-      description: 'Application de gestion des baux avec génération de documents.',
+      name: 'PROJECT_HOUSE',
+      description: 'PROJECT_HOUSE_DESC',
       image: 'assets/images/projects/immo.webp',
       link: '#',
       chips: ['Spring', 'Angular', 'SQL']
     },
     {
-      name: 'Cheese Stock Image',
-      description: 'Plateforme de gestion et vente d’images.',
+      name: 'PROJECT_CHEESE',
+      description: 'PROJECT_CHEESE_DESC',
       image: 'assets/images/projects/photo.webp',
       link: '#',
       chips: ['PHP', 'Javascript', 'CSS', 'HTML']

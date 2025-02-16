@@ -1,13 +1,13 @@
 <div class="not-found-container">
-    <h1 aria-label="Erreur 404">404</h1>
-    <p aria-label="Description de l'erreur">
-      Oups! La page que vous cherchez n'existe pas.
-    </p>
-    <button 
-      (click)="goToPage('/home')" 
-      class="btn" 
-      aria-label="Retour à la page d'accueil">
-      Retour à l'accueil
-    </button>
-  </div>
+  <h1 [attr.aria-label]="'error.title' | translate">404</h1>
+  <p [attr.aria-label]="'error.phrase' | translate">
+    {{ 'error.phrase' | translate }}
+  </p>
+  <button 
+    (click)="goToPage('/home')" 
+    class="btn" 
+    [attr.aria-label]="'error.button' | translate">
+    {{ 'error.button' | translate }}
+  </button>
+</div>
   

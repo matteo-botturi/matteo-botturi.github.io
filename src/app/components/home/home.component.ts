@@ -1,25 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit{
   typingTexts = [
     "Full Stack Developer",
-    "Open to Alternance",
     "Java | Spring | Angular",
   ];
   currentText = "";
   currentIndex = 0;
   cursorIndex = 0;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.typeNextText();

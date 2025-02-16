@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-not-found',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './not-found.component.html',
   styleUrls: ['./not-found.component.css']
 })

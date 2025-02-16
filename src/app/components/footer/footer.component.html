@@ -3,37 +3,55 @@
     <div class="row">
       <div class="col l6 s12">
         <div class="footer-buttons">
-          <p class="grey-text text-lighten-4" aria-label="Auteur du portfolio">
-            Réalisé avec 💖 par Matteo
+          <p class="grey-text text-lighten-4" [attr.aria-label]="'footer.sign' | translate">
+            {{ 'footer.signature' | translate }}
           </p>
-          <div class="social-links" aria-label="Liens vers les réseaux sociaux">
-            <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <img src="assets/images/home/linkedin.webp" alt="LinkedIn" class="icon-link">
+          <div class="social-links" [attr.aria-label]="'footer.social_links' | translate">
+            <a href="https://www.linkedin.com/in/matteo-botturi/" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'social.linkedin' | translate">
+              <img src="assets/images/home/linkedin.webp" [alt]="'social.linkedin' | translate" class="icon-link">
             </a>
-            <a href="https://github.com/matteo-botturi/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <img src="assets/images/home/github.webp" alt="GitHub" class="icon-link">
+            <a href="https://github.com/matteo-botturi/" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'social.github' | translate">
+              <img src="assets/images/home/github.webp" [alt]="'social.github' | translate" class="icon-link">
             </a>
           </div>
         </div>
       </div>
+      
       <div class="col l6 s12">
         <div class="footer-buttons">
-          <ul class="quick-links" aria-label="Liens de navigation">
-            <li><a routerLink="/home" aria-label="Aller à la page d'accueil" title="Retour à la page d'accueil de Matteo Botturi, Portfolio">Accueil</a></li>
-            <li><a routerLink="/about" aria-label="Aller à la page À propos" title="Découvrir plus sur Matteo Botturi, son parcours et son expertise">À propos</a></li>
-            <li><a routerLink="/skills" aria-label="Aller à la page Compétences" title="Voir les compétences et les technologies maîtrisées par Matteo Botturi">Compétences</a></li>
-            <li><a routerLink="/projects" aria-label="Aller à la page Projets" title="Explorer les projets réalisés par Matteo Botturi">Projets</a></li>
+          <ul class="quick-links" [attr.aria-label]="'footer.navigation_links' | translate">
+            <li>
+              <a routerLink="/home" [attr.aria-label]="'menu.home' | translate" [title]="'footer_desc.home' | translate">
+                {{ 'menu.home' | translate }}
+              </a>
+            </li>
+            <li>
+              <a routerLink="/about" [attr.aria-label]="'menu.about' | translate" [title]="'footer_desc.about' | translate">
+                {{ 'menu.about' | translate }}
+              </a>
+            </li>
+            <li>
+              <a routerLink="/skills" [attr.aria-label]="'menu.skills' | translate" [title]="'footer_desc.skills' | translate">
+                {{ 'menu.skills' | translate }}
+              </a>
+            </li>
+            <li>
+              <a routerLink="/projects" [attr.aria-label]="'menu.projects' | translate" [title]="'footer_desc.projects' | translate">
+                {{ 'menu.projects' | translate }}
+              </a>
+            </li>
           </ul>
           <div class="footer-logo">
-            <img src="assets/images/logo.webp" alt="Logo de Matteo Botturi" class="footer-logo-img">
+            <img src="assets/images/logo.webp" [alt]="'footer.logo_alt' | translate" class="footer-logo-img"> 
           </div>
         </div>
       </div>
     </div>
   </div>
+  
   <div class="footer-copyright">
-    <div class="container" aria-label="Informations sur le copyright">
-      © 2024 - Tous droits réservés
+    <div class="container" [attr.aria-label]="'footer.copyrights' | translate">
+      {{ 'footer.copyrights' | translate }}
     </div>
   </div>
 </footer>
