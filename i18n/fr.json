@@ -1,0 +1,102 @@
+{
+    "menu": {
+        "home": "Accueil",
+        "about": "À propos",
+        "skills": "Compétences",
+        "projects": "Projets"
+    },
+
+    "header": {
+        "open_menu": "Ouvrir le menu mobile",
+        "navigation": "Navigation du menu mobile",
+        "change_language_fr": "Changer la langue en français",
+        "change_language_it": "Changer la langue en italien"
+    },
+
+    "footer": {
+        "copyrights": "© 2025 - Tous droits réservés",
+        "signature": "Réalisé avec 💖 par Matteo",
+        "sign": "Portfolio réalisé par Matteo Botturi.",
+        "social_links": "Liens vers les réseaux sociaux",
+        "navigation_links": "Liens de navigation",
+        "logo_alt": "Logo de Matteo Botturi"
+    },
+
+    "footer_desc": {
+        "home": "Retour à la page d'accueil de Matteo Botturi, Portfolio",
+        "about": "Découvrir plus sur Matteo Botturi, son parcours et son expertise",
+        "skills": "Voir les compétences et les technologies maîtrisées par Matteo Botturi",
+        "projects": "Explorer les projets réalisés par Matteo Botturi"
+    },
+
+    "social": {
+        "linkedin": "Profil LinkedIn de Matteo Botturi",
+        "github": "Profil GitHub de Matteo Botturi"
+    },
+
+    "home":{
+        "first_button": "mes projets",
+        "second_button": "mes compétences",
+        "title": "Bonjour, je suis Matteo Botturi",
+        "description": "Passionné par le développement web, la création d’interfaces intuitives et les technologies innovantes. Toujours prêt à relever de nouveaux défis et à apprendre.",
+        "alert": "Contactez-moi",
+        "hero_alt": "Portrait de Matteo Botturi"
+    },
+
+    "about": {
+        "title": "Qui suis-je?",
+        "first_paragraph": "Je suis un développeur Full-Stack, passionné par l’innovation et le développement d’applications performantes. Diplômé en Développement d’Applications Java (RNCP Niveau 6), je me spécialise dans le back-end avec Java, Spring et Quarkus, tout en renforçant mes compétences en front-end avec Angular.",
+        "second_paragraph": "Lors de ma formation et de mon stage de trois mois dans le secteur immobilier, j’ai participé au développement d’une API REST avec Spring Boot pour l’automatisation des contrats de location, intégrant le remplissage automatique des champs locataires et la gestion des données avec PostgreSQL. J’ai également contribué à l’optimisation et au perfectionnement des interfaces en Angular et Materialize.",
+        "third_paragraph": "En parallèle, j’ai développé un microservice d’authentification sécurisé avec Quarkus, en prenant en charge des aspects clés de la sécurité, notamment la codification des données et la gestion des tokens d’accès.",
+        "fourth_paragraph": "Polyvalent et adaptable, je m’intègre facilement dans différents environnements techniques. Mon parcours m’a permis d’acquérir des compétences transversales telles que la gestion des priorités, l’organisation et le travail en équipe, essentielles en milieu Agile. Curieux et rigoureux, j’ai une grande capacité d’apprentissage et je suis toujours prêt à relever de nouveaux défis. Bien que ma préférence aille vers Java, je suis ouvert à travailler avec d’autres langages orientés objet.",
+        "fifth_paragraph": "Toujours en quête d’évolution, je me forme régulièrement via des cours en ligne sur Coursera et des projets pratiques, afin d’approfondir mes connaissances et d’élargir mon champ de compétences."
+    },
+
+    
+    "error": {
+        "title": "Erreur 404",
+        "phrase": "Oops! La page que vous cherchez n'existe pas.",
+        "button": "Retour à l'accueil"
+    },
+
+    "skills": {
+        "title": "Mon stack technique",
+        "first_menu_option": "Toutes les catégories",
+        "category_label": "Compétences en {{category}}",
+        "selected_skills": "Compétences sélectionnées",
+        "icon_alt": "Icône de {{skill}}"
+    },
+    "LANGAGES": "Langages",
+    "FRAMEWORKS_LIBRARIES": "Frameworks et Bibliothèques",
+    "TESTS": "Tests",
+    "DB": "Bases de données",
+    "API_SECURITY": "API & Securité",
+    "DEVOPS_TOOLS": "Outils & DevOps",
+    "IDE": "IDE",
+    "METHODOLOGIES": "Méthodologies",
+
+    "projects": {
+        "button_git": "Aller au dépôt",
+        "button_lazy": "Charger plus",
+        "card_aria": "Carte du projet",
+        "image_alt": "Photo du projet: {{name}}",
+        "tech_used": "Technologies utilisées",
+        "work_in_progress": "Travaux en cours"    
+    },
+    "PROJECT_BREW_SHOP": "Brew Shop",
+    "PROJECT_BREW_SHOP_DESC": "API de gestion des bières, ventes, stock et relations associées.",
+    "PROJECT_RUBRIQUE": "Rubrique",
+    "PROJECT_RUBRIQUE_DESC": "Rubrique JavaFX avec fonctions de recherche et sauvegarde.",
+    "PROJECT_POKEDEX": "Pokédex",
+    "PROJECT_POKEDEX_DESC": "Application web pour consulter des informations sur des Pokémon.",
+    "PROJECT_POKER": "Poker Game",
+    "PROJECT_POKER_DESC": "Poker en Java avec gestion des mains et résolutions d'égalités.",
+    "PROJECT_AUTH": "Authentification",
+    "PROJECT_AUTH_DESC": "Microservice pour la sécurisation API et gestion des utilisateurs.",
+    "PROJECT_MAGNA": "Magna Carta",
+    "PROJECT_MAGNA_DESC": "Propositions de recettes personnalisées selon les objectifs nutritionnels.",
+    "PROJECT_HOUSE": "Gestion locative",
+    "PROJECT_HOUSE_DESC": "Application de gestion des baux avec génération de documents.",
+    "PROJECT_CHEESE": "Cheese Stock Image",
+    "PROJECT_CHEESE_DESC": "Plateforme de gestion et vente d’images."
+}
